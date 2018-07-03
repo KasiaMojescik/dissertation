@@ -15,6 +15,10 @@ public class RealPlayerMove2 : MonoBehaviour
     public Transform arrowHolder;
     private int currentArrowIndex = 0;
     private int numberOfArrows;
+    private int count;
+    public Text winText;
+    public Text countText;
+
     //private Transform playerTransform;
 
     //CharacterController charControl;
@@ -31,6 +35,9 @@ public class RealPlayerMove2 : MonoBehaviour
 
     void Start()
     {
+        count = 0;
+        SetCountText();
+        winText.text = "";
         rb = GetComponent<Rigidbody>();
         //playerTransform = this.transform;
         Debug.Log("Starting...");
@@ -95,7 +102,29 @@ public class RealPlayerMove2 : MonoBehaviour
             }
 
             //FindObjectOfType<AudioManager>().Play("left");
-        }
+        } else if (other.CompareTag("Pick Up"))
+            {
 
+                Debug.Log("Collision tag is Pick Up and i am doing some stuff");
+
+                other.gameObject.SetActive(false);
+            //Destroy(other.gameObject);
+
+            count = count + 1;
+            SetCountText();
+
+            //FindObjectOfType<AudioManager>().Play("left");
+        }
+        }
+    void SetCountText()
+    {
+        countText.text = "Count: " + count.ToString();
+        if (count == 7)
+        {
+            winText.text = "You Finished!";
+            AudioManager audioManager = FindObjectOfType<AudioManager>();
+            audioManager.Play("ding-sound");
+        }
     }
 }
+

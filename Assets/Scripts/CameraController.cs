@@ -3,59 +3,59 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour {
+    
+        public Transform playerBody;
+        public float mouseSensitivity;
 
-    public Transform playerBody;
-    public float mouseSensitivity;
+        float xAxisClamp = 0.0f;
 
-    float xAxisClamp = 0.0f;
-
-    void Awake()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    void Update()
-    {
-        //RotateCamera();
-    }
-
-    void RotateCamera()
-    {
-        float mouseX = Input.GetAxis("Mouse X");
-     //   float mouseY = Input.GetAxis("Mouse Y");
-
-        float rotAmountX = mouseX * mouseSensitivity;
-    //    float rotAmountY = mouseY * mouseSensitivity;
-
-     //   xAxisClamp -= rotAmountY;
-
-      //  Vector3 targetRotCam = transform.rotation.eulerAngles;
-        Vector3 targetRotBody = playerBody.rotation.eulerAngles;
-
-     //   targetRotCam.x -= rotAmountY;
-     //   targetRotCam.z = 0;
-        targetRotBody.y += rotAmountX;
-
-        if (xAxisClamp > 90)
+        void Awake()
         {
-            xAxisClamp = 90;
-          //  targetRotCam.x = 90;
-        }
-        else if (xAxisClamp < -90)
-        {
-            xAxisClamp = -90;
-          //  targetRotCam.x = 270;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
-       // print(mouseY);
+        void Update()
+        {
+          RotateCamera();
+        }
+
+        void RotateCamera()
+        {
+            float mouseX = Input.GetAxis("Mouse X");
+         //   float mouseY = Input.GetAxis("Mouse Y");
+
+            float rotAmountX = mouseX * mouseSensitivity;
+        //    float rotAmountY = mouseY * mouseSensitivity;
+
+         //   xAxisClamp -= rotAmountY;
+
+          //  Vector3 targetRotCam = transform.rotation.eulerAngles;
+            Vector3 targetRotBody = playerBody.rotation.eulerAngles;
+
+         //   targetRotCam.x -= rotAmountY;
+         //   targetRotCam.z = 0;
+            targetRotBody.y += rotAmountX;
+
+            if (xAxisClamp > 90)
+            {
+                xAxisClamp = 90;
+              //  targetRotCam.x = 90;
+            }
+            else if (xAxisClamp < -90)
+            {
+                xAxisClamp = -90;
+              //  targetRotCam.x = 270;
+            }
+
+           // print(mouseY);
 
 
-      //  transform.rotation = Quaternion.Euler(targetRotCam);
-        playerBody.rotation = Quaternion.Euler(targetRotBody);
+          //  transform.rotation = Quaternion.Euler(targetRotCam);
+            playerBody.rotation = Quaternion.Euler(targetRotBody);
+
+
+        }
+
 
 
     }
-
-
-
-}

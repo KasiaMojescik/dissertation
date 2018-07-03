@@ -232,6 +232,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MazeGenerator\Scripts\BasicMazeGenerator.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\DivisionMazeGenerator.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\MazeCell.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\MazeSpawner.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\OldestTreeMazeGenerator.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\RandomTreeMazeGenerator.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\RecursiveMazeGenerator.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\RecursiveTreeMazeGenerator.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\RollerBall.cs" />
+    <Compile Include="Assets\MazeGenerator\Scripts\TreeMazeGenerator.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
@@ -240,6 +250,7 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Chaser.cs" />
     <Compile Include="Assets\Scripts\GameScene.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\NavLineCreator.cs" />
     <Compile Include="Assets\Scripts\NavObject.cs" />
     <Compile Include="Assets\Scripts\Objective.cs" />
