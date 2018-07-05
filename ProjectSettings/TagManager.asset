@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Pick Up
-  - Arrow
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - Pick Ups
-  - Walls
-  - Aisles
+  - 
+  - 
+  - 
   - 
   - 
   - 

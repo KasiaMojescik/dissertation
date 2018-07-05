@@ -1,0 +1,2 @@
+C:\Users\katar\Desktop\Software Development\Roll Ball\Temp\UnityVS_obj\Debug\Roll Ball.csprojAssemblyReference.cache
+C:\Users\katar\Desktop\Software Development\Roll Ball\Temp\UnityVS_obj\Debug\Roll Ball.csproj.CoreCompileInputs.cache

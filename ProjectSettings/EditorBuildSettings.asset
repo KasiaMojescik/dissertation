@@ -4,19 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/New Scene.unity
-    guid: dcede4aa38109374491dea8301f0c454
-  - enabled: 1
-    path: Assets/MiniGame.unity
-    guid: 177adedb8583f13448b55072d1445b56
-  - enabled: 1
-    path: Assets/MiniGame - Copy.unity
-    guid: 1ead0d241a05ce94297ff902a23eec16
-  - enabled: 1
-    path: Assets/MiniGame - Copy - Copy.unity
-    guid: 0704ed75b951d604b82c1dd9c1eb3edb
-  - enabled: 1
-    path: Assets/MiniGame - Copy (2).unity
-    guid: 8c48642359688f847b216889a719897e
+  m_Scenes: []

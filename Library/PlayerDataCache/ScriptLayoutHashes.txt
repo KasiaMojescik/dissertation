@@ -2,11 +2,10 @@ WindowsStandalone
 PlayerPath?
 C:/Users/katar/Desktop/Software Development/Roll Ball/building scenes.exe
 SceneListBegin?
-Assets/New Scene.unity
-Assets/MiniGame.unity
-Assets/MiniGame - Copy.unity
-Assets/MiniGame - Copy - Copy.unity
-Assets/MiniGame - Copy (2).unity
+Assets/Menu.unity
+Assets/Scene 3 Just Arrow.unity
+Assets/Scene 3 Just Sound.unity
+Assets/Scene 3 Line.unity
 SceneListEnd?
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 4b12dd839b2293f8457cd67cc3610b85 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -157,7 +156,7 @@ cc0ff0f11a6a7cbd2053d130c5d0a17d Assembly-CSharp.dll:.NavLineCreator
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 67a5f2c97205d2e41a8ed7c7ce898f6e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-69fb79ebfc14505d768f2ed308594e60 Assembly-CSharp.dll:.RealPlayerMove2
+ac99193d67c80d55f62bbaf234866e3d Assembly-CSharp.dll:.RealPlayerMove2
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -166,7 +165,5 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Rotater
 c0abafabd2c62a99cfe0e5c34be18057 Assembly-CSharp.dll:.GameScene
-a71e89494a00540356e3247bc0ed0342 Assembly-CSharp.dll:UnityEngine.AI.NavMeshLink
-070e78ac8e6a2e6c8cd35f94e0f32e15 Assembly-CSharp.dll:.RollerBall
-1e5a07e5a19e9ca269fab3020d683620 Assembly-CSharp.dll:.MazeSpawner
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.MainMenu
+a71e89494a00540356e3247bc0ed0342 Assembly-CSharp.dll:UnityEngine.AI.NavMeshLink
