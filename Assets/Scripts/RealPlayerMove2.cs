@@ -1,20 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class RealPlayerMove2 : MonoBehaviour
 {
 
     [SerializeField]
-    Transform destination;
-    NavMeshAgent navMeshAgent;
-    private Rigidbody rb;
+    // Transform destination;
+    // NavMeshAgent navMeshAgent;
+    //  private Rigidbody rb;
+
+    // to display navigation cues
     public Transform arrowHolder;
     private int currentArrowIndex = 0;
     private int numberOfArrows;
+
+    // to show results
     private int count;
     public Text winText;
     public Text countText;
@@ -25,26 +25,38 @@ public class RealPlayerMove2 : MonoBehaviour
     public float walkSpeed;
 
 
-    Vector3[] possitions;
-    int currentPossitionIndex = 0;
+    //  Vector3[] possitions;
+    //  int currentPossitionIndex = 0;
     /*
     private void Awake()
     {
         charControl = GetComponent<CharacterController>();
     }*/
 
+    // to calculate distance travelled
+    float distanceTravelled = 0;
+    Vector3 lastPosition;
+
+    // to calculate time spent playing
+    float playedTime;
+    public Text time;
+
     void Start()
     {
+        playedTime = 0;
+        lastPosition = transform.position;
+        Debug.Log("i am at position" + lastPosition);
         count = 0;
         SetCountText();
+        time.text = "";
         winText.text = "";
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         //playerTransform = this.transform;
-        Debug.Log("Starting...");
-        navMeshAgent = this.GetComponent<NavMeshAgent>();
+        UnityEngine.Debug.Log("Starting...");
+        /*navMeshAgent = this.GetComponent<NavMeshAgent>();
         if (navMeshAgent == null)
         {
-            Debug.LogError("This NavMeshAgent is not attached to " + gameObject.name);
+            UnityEngine.Debug.LogError("This NavMeshAgent is not attached to " + gameObject.name);
         }
         else
         {
@@ -52,7 +64,7 @@ public class RealPlayerMove2 : MonoBehaviour
             // InvokeRepeating("DrawArrow", 0, 2);
             //SetDestination();
 
-        }
+        }*/
 
         if (arrowHolder != null)
         {
@@ -62,16 +74,15 @@ public class RealPlayerMove2 : MonoBehaviour
         }
     }
 
-
-
-
-
-
     private void FixedUpdate()
     {
+        playedTime += Time.deltaTime;
+        distanceTravelled += Vector3.Distance(transform.position, lastPosition);
+        lastPosition = transform.position;
         MovePlayer();
     }
 
+    // allowing to move the player using keyboard
     void MovePlayer()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -82,18 +93,14 @@ public class RealPlayerMove2 : MonoBehaviour
         transform.Translate(moveHorizontal * walkSpeed * Time.deltaTime, 0f, moveVertical * walkSpeed * Time.deltaTime);
     }
 
+    // this method defines what happens during collisions
     private void OnTriggerEnter(Collider other)
     {
-
         //Debug.Log("Collision happaning with the real player.");
-
         if (other.CompareTag("Arrow"))
         {
-
             Debug.Log("Collision tag is Arrow and i am doing some stuff");
-
             other.gameObject.SetActive(false);
-            //Destroy(other.gameObject);
 
             if (currentArrowIndex < numberOfArrows - 1)
             {
@@ -101,29 +108,27 @@ public class RealPlayerMove2 : MonoBehaviour
                 currentArrowIndex++;
             }
 
-            //FindObjectOfType<AudioManager>().Play("left");
-        } else if (other.CompareTag("Pick Up"))
-            {
+        }
+        else if (other.CompareTag("Pick Up"))
+        {
 
-                Debug.Log("Collision tag is Pick Up and i am doing some stuff");
-
-                other.gameObject.SetActive(false);
-            //Destroy(other.gameObject);
-
+            Debug.Log("Collision tag is Pick Up and i am doing some stuff");
+            other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
-
-            //FindObjectOfType<AudioManager>().Play("left");
         }
-        }
+    }
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
         if (count == 7)
         {
+            time.text = "Time played: " + Mathf.RoundToInt(playedTime).ToString();
             winText.text = "You Finished!";
             AudioManager audioManager = FindObjectOfType<AudioManager>();
-            audioManager.Play("ding-sound");
+            audioManager.Play("ding_sound");
+            Debug.Log("my final position is" + lastPosition);
+            Debug.Log("i walked" + distanceTravelled);
         }
     }
 }

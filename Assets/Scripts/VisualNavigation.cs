@@ -13,10 +13,9 @@ public class VisualNavigation : MonoBehaviour {
         destination = FindTarget();
         if (destination != null)
         {
-            Vector3 targetPosition = destination.transform.position;
+           Vector3 targetPosition = destination.transform.position;
             targetPosition.y = transform.position.y;
             transform.LookAt(targetPosition);
-            // DirectArrow();
         }
 	}
 

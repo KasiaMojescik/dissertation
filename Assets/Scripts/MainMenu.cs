@@ -7,20 +7,40 @@ public class MainMenu : MonoBehaviour
 {
 
     // For scene 1
-    public void PlayScene1()
+    public void PlayArrow()
     {
-        SceneManager.LoadScene("Scene 3 Just Arrow");
+        SceneManager.LoadScene("Just Arrow");
     }
 
     // Update is called once per frame
-    public void PlayScene2()
+    public void PlayVoice()
     {
-        SceneManager.LoadScene("Scene 3 Just Sound");
+        SceneManager.LoadScene("Just Sound");
     }
 
     // Update is called once per frame
-    public void PlayScene3()
+    public void PlayHaptic()
     {
-        SceneManager.LoadScene("Scene 3 Line");
+        SceneManager.LoadScene("Just Haptic");
+    }
+
+    public void PlayArrowVoice()
+    {
+        SceneManager.LoadScene("Arrow and Voice");
+    }
+
+    public void PlayArrowHaptic()
+    {
+        SceneManager.LoadScene("Arrow and Haptic");
+    }
+    
+    public void PlaySingleArrow()
+    {
+        SceneManager.LoadScene("Single Arrow");
+    }
+
+    public void PlayLine()
+    {
+        SceneManager.LoadScene("Line");
     }
 }

@@ -4,4 +4,28 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Arrow and Haptic.unity
+    guid: c4807b3a8e2685642aa7a0dd335eed0b
+  - enabled: 1
+    path: Assets/Arrow and Voice.unity
+    guid: 3bba7671c06c80a4090a6d2bed6eb9d7
+  - enabled: 1
+    path: Assets/Just Arrow.unity
+    guid: 9e17a4ddce28eba44bc9284568e8cabf
+  - enabled: 1
+    path: Assets/Just Hapic.unity
+    guid: 9dff21cb96b87494991bfec622da352b
+  - enabled: 1
+    path: Assets/Just Sound.unity
+    guid: f037cef342fc4be4d86804d5c2c04b65
+  - enabled: 1
+    path: Assets/Line.unity
+    guid: 955e6cee748b3a04184cd42ce702fea5
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: 25e8e3cfca1202649b10145d9279ff80
+  - enabled: 1
+    path: Assets/Single Arrow.unity
+    guid: 674ad396777213f4c912088b564a455d
