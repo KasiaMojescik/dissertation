@@ -55,7 +55,33 @@ public class NavObject : MonoBehaviour
 
                 if (isHaptic)
                 {
-                    //do something
+                    switch (direction)
+                    {
+
+                        // SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([length in microseconds as ushort]);
+                        case Direction.Left:
+                            {
+                                // SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([3000]);
+                                break;
+                            }
+                        case Direction.Right:
+                            {
+                                //   SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([3000]);
+                                break;
+                            }
+                        case Direction.Straight:
+                            {
+                                //  SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([3000]);
+                                //  SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([3000]);
+                                break;
+                            }
+                        case Direction.Around:
+                            {
+                                //  SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([1000]);
+                                //  SteamVR_Controller.Input([the index of the controller you want to vibrate]).TriggerHapticPulse([1000]);
+                                break;
+                            }
+                    }
                 }
             }
 

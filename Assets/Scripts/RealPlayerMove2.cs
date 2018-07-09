@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,7 +46,7 @@ public class RealPlayerMove2 : MonoBehaviour
     {
         playedTime = 0;
         lastPosition = transform.position;
-        Debug.Log("i am at position" + lastPosition);
+      //  Debug.Log("i am at position" + lastPosition);
         count = 0;
         SetCountText();
         time.text = "";
@@ -63,7 +64,6 @@ public class RealPlayerMove2 : MonoBehaviour
             possitions = new Vector3[256];
             // InvokeRepeating("DrawArrow", 0, 2);
             //SetDestination();
-
         }*/
 
         if (arrowHolder != null)
@@ -78,8 +78,13 @@ public class RealPlayerMove2 : MonoBehaviour
     {
         playedTime += Time.deltaTime;
         distanceTravelled += Vector3.Distance(transform.position, lastPosition);
+       // Debug.Log("so far i walked " + distanceTravelled);
         lastPosition = transform.position;
         MovePlayer();
+        if (playedTime >= 360)
+        {
+            FinishGame();
+        }
     }
 
     // allowing to move the player using keyboard
@@ -123,13 +128,19 @@ public class RealPlayerMove2 : MonoBehaviour
         countText.text = "Count: " + count.ToString();
         if (count == 7)
         {
-            time.text = "Time played: " + Mathf.RoundToInt(playedTime).ToString();
-            winText.text = "You Finished!";
-            AudioManager audioManager = FindObjectOfType<AudioManager>();
-            audioManager.Play("ding_sound");
-            Debug.Log("my final position is" + lastPosition);
-            Debug.Log("i walked" + distanceTravelled);
+            FinishGame();
         }
     }
-}
 
+    void FinishGame()
+    {
+        time.text = "Time played: " + Mathf.RoundToInt(playedTime).ToString();
+        winText.text = "You Finished!";
+        AudioManager audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Play("ding_sound");
+        Debug.Log("my final position is" + lastPosition);
+        Debug.Log("i walked" + distanceTravelled);
+        Debug.Log("time taken " + Mathf.RoundToInt(playedTime).ToString());
+    }
+    
+}

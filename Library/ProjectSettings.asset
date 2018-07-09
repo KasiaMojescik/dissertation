@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-  productGUID: 4b0164e3fa0f3004c9b50eb5a0aa0e1e
+  productGUID: 193c410fe36a66b42b2967ccf5c43749
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -268,7 +268,7 @@ PlayerSettings:
       m_Icon: {fileID: 0}
       m_Width: 1
       m_Height: 1
-      m_Kind: 5025
+      m_Kind: 5709
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
@@ -718,7 +718,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 0f655ae8-cc68-4a10-94b4-057d2366f17c
-  projectName: Roll Ball
+  projectName: Dissertation - Navigation Project
   organizationId: katarzynamojescik
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
